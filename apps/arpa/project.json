@@ -1,0 +1,77 @@
+{
+  "name": "arpa",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "arpa",
+  "sourceRoot": "apps/arpa/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/arpa",
+        "index": "apps/arpa/src/index.html",
+        "browser": "apps/arpa/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/arpa/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/arpa/src/favicon.ico", "apps/arpa/src/assets"],
+        "styles": ["apps/arpa/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "arpa:build:production"
+        },
+        "development": {
+          "buildTarget": "arpa:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "arpa:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/arpa/jest.config.ts"
+      }
+    }
+  }
+}
