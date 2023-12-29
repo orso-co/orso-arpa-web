@@ -2,7 +2,9 @@
   "name": "@arpa/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve arpa"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.0.0",
@@ -10,10 +12,19 @@
     "@angular/compiler": "~17.0.0",
     "@angular/core": "~17.0.0",
     "@angular/forms": "~17.0.0",
+    "@angular/material": "^17.0.4",
     "@angular/platform-browser": "~17.0.0",
     "@angular/platform-browser-dynamic": "~17.0.0",
     "@angular/router": "~17.0.0",
+    "@fullcalendar/angular": "^6.1.10",
+    "@fullcalendar/core": "^6.1.10",
+    "@fullcalendar/daygrid": "^6.1.10",
+    "@fullcalendar/timegrid": "^6.1.10",
     "@nx/angular": "17.2.8",
+    "flag-icons": "^7.1.0",
+    "primeflex": "^3.3.1",
+    "primeicons": "^6.0.1",
+    "primeng": "^17.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.0"
@@ -28,6 +39,7 @@
     "@angular/cli": "~17.0.0",
     "@angular/compiler-cli": "~17.0.0",
     "@angular/language-service": "~17.0.0",
+    "@angular/localize": "^17.0.8",
     "@nx/eslint": "17.2.8",
     "@nx/eslint-plugin": "17.2.8",
     "@nx/jest": "17.2.8",

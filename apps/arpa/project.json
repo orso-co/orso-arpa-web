@@ -17,7 +17,7 @@
         "tsConfig": "apps/arpa/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/arpa/src/favicon.ico", "apps/arpa/src/assets"],
-        "styles": ["apps/arpa/src/styles.scss"],
+        "styles": ["apps/arpa/src/styles.scss", "ui/themes/dark.scss", "ui/themes/light.scss"],
         "scripts": []
       },
       "configurations": {
