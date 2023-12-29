@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "types": []
+  },
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/test-setup.ts",
+    "jest.config.ts",
+    "src/**/*.test.ts"
+  ],
+  "include": ["src/**/*.ts", "src/lib/models/mupros/MusicianProfileDeactivationDto.ts", "../services/src/lib/models/musicianProfileDeactivationCreateBodyDto.ts", "../services/src/lib/models/musicianProfileCreateBodyDto.ts", "../services/src/lib/models/loginDto.ts", "../services/src/lib/models/musicianProfileModifyBodyDto.ts", "../services/src/lib/models/myContactDetailCreateDto.ts", "../services/src/lib/models/myContactDetailModifyBodyDto.ts", "../services/src/lib/models/myDoublingInstrumentCreateBodyDto.ts", "../services/src/lib/models/myDoublingInstrumentModifyBodyDto.ts", "../services/src/lib/models/myMusicianProfileCreateDto.ts", "../services/src/lib/models/myMusicianProfileModifyBodyDto.ts", "../services/src/lib/models/myMusicianProfileRemoveDocumentDto.ts", "../services/src/lib/models/myProjectParticipationModifyBodyDto.ts", "../services/src/lib/models/myRegionPreferenceCreateBodyDto.ts", "../services/src/lib/models/myRegionPreferenceModifyBodyDto.ts", "../services/src/lib/models/myRegionPreferenceRemoveDto.ts", "../services/src/lib/models/myUserProfileModifyDto.ts", "../services/src/lib/models/newsModifyBodyDto.ts", "../services/src/lib/models/newsCreateDto.ts", "../services/src/lib/models/personAddStakeholderGroupDto.ts", "../services/src/lib/models/personCreateDto.ts", "../services/src/lib/models/personModifyBodyDto.ts", "../services/src/lib/models/personRemoveStakeholderGroupDto.ts", "../services/src/lib/models/projectCreateDto.ts", "../services/src/lib/models/projectModifyBodyDto.ts", "../services/src/lib/models/venueModifyBodyDto.ts", "../services/src/lib/models/venueCreateDto.ts", "../services/src/lib/models/userRegisterDto.ts", "../services/src/lib/models/appointments/AppointmentParticipationSetResultDto.ts", "../services/src/lib/models/contactDetailModifyBodyDto.ts", "../services/src/lib/models/inlineResponse403A.ts", "../services/src/lib/models/MyMusicianProfileAddDocumentDto.ts", "../services/src/lib/models/PersonInviteResultDto.ts", "../services/src/lib/models/RegionCreateDto.ts", "../services/src/lib/models/UrlCreateBodyDto.ts", "../services/src/lib/models/UrlModifyBodyDto.ts", "../services/src/lib/models/UrlRemoveRoleDto.ts", "../services/src/lib/models/RegionModifyBodyDto.ts", "../services/src/lib/models/ResetPasswordDto.ts", "../services/src/lib/models/SetMyAppointmentParticipationPredictionDto.ts", "../services/src/lib/models/SetProjectParticipationBodyDto.ts", "../services/src/lib/models/SetRoleDto.ts"]
+}

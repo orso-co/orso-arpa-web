@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve arpa"
+    "start": "nx serve arpa",
+    "new-lib": "func() { nx g @nx/angular:lib $1 --directory=libs/$1 --importPath @arpa/$1; }; func",
+    "rm-lib": "func() { nx g remove $1; }; func",
+    "new-component": "func() { nx g @nx/angular:component $1 --project $2; }; func",
+    "new-module": "func() { nx g @nx/angular:module $1 --project $2; }; func",
+    "new-service": "func() { nx g @nx/angular:service services/$1/$1 --project $2; }; func"
   },
   "private": true,
   "dependencies": {
