@@ -1,4 +1,4 @@
-import { SelectValueDto } from "../select/SelectValueDto";
+import { SelectValueDto } from '../select/SelectValueDto';
 
 export interface AddressDto {
   id?: string;

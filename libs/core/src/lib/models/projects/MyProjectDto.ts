@@ -7,4 +7,3 @@ export interface MyProjectDto {
   participations: MyProjectParticipationDto[];
   appointments: MyAppointmentListDto[];
 }
-

@@ -8,27 +8,16 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/arpa",
         "index": "apps/arpa/src/index.html",
         "browser": "apps/arpa/src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/arpa/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/arpa/src/favicon.ico",
-          "apps/arpa/src/assets"
-        ],
-        "styles": [
-          "apps/arpa/src/styles.scss",
-          "libs/ui/themes/dark.scss",
-          "libs/ui/themes/light.scss"
-        ],
+        "assets": ["apps/arpa/src/favicon.ico", "apps/arpa/src/assets"],
+        "styles": ["apps/arpa/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -81,15 +70,11 @@
     },
     "lint": {
       "executor": "@nx/eslint:lint",
-      "outputs": [
-        "{options.outputFile}"
-      ]
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/arpa/jest.config.ts"
       }

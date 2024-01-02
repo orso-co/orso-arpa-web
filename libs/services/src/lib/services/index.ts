@@ -1,3 +1,3 @@
-export * from './users/users.service'
-export * from '../../../../core/src/lib/services/api/api.service'
-export * from './services.module'
+export * from './users/users.service';
+export * from './select-value/select-value.service';
+export * from './services.module';

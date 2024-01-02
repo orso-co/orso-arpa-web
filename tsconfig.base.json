@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@arpa/admin": ["libs/admin/src/index.ts"],
       "@arpa/core": ["libs/core/src/index.ts"],
       "@arpa/dashboard": ["libs/dashboard/src/index.ts"],
+      "@arpa/persons": ["libs/persons/persons/src/index.ts"],
       "@arpa/services": ["libs/services/src/index.ts"],
       "@arpa/ui": ["libs/ui/src/index.ts"]
     }

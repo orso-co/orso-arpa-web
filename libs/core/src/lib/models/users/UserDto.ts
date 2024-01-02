@@ -13,4 +13,3 @@ export interface UserDto {
   status?: UserStatus;
   personId?: string;
 }
-

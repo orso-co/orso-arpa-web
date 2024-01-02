@@ -1,0 +1,22 @@
+<p-avatar
+  *ngIf="!imageUrl"
+  [label]="initials"
+  [size]="size"
+  [style]="{
+    'background-color': getColor(),
+    color: 'rgba(255, 255, 255, 0.87)'
+  }"
+  shape="circle"
+  styleClass="p-mr-3"
+></p-avatar>
+<p-avatar
+  *ngIf="imageUrl"
+  [attr.size]="size"
+  [image]="imageUrl"
+  [style]="{
+    'background-color': getColor(),
+    color: 'rgba(255, 255, 255, 0.87)'
+  }"
+  shape="circle"
+  styleClass="p-mr-3"
+></p-avatar>

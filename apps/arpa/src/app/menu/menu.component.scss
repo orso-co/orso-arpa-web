@@ -1,0 +1,31 @@
+:host ::ng-deep .p-menu {
+  /*.p-menuitem-link .p-menuitem-text {
+    color: #000 !important;
+  }
+
+  .p-menuitem-link .p-menuitem-icon {
+    color: #000 !important;
+  }
+  .p-submenu-header{
+    color: #000 !important;
+    background: #0da350 !important;
+  }*/
+
+  .p-menuitem-link:not(.p-disabled) {
+    transition: background-color 0.25s ease-in-out;
+
+    &.p-menuitem-link-active {
+      &:hover {
+        background-color: var(--surface-400);
+      }
+    }
+  }
+  .p-menuitem-link-active,
+  .p-menuitem-link-active:hover {
+    background-color: var(--surface-400);
+  }
+
+  // background: #0da350 !important;
+  // padding: 0;
+  border-radius: 0;
+}

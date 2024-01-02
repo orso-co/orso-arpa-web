@@ -1,21 +1,20 @@
-body, html {
+body,
+html {
   color: var(--text-color);
 }
 
 button {
-  margin-top: .25rem !important;
+  margin-top: 0.25rem !important;
 }
 
 mat-toolbar {
-
   button {
     margin-top: 0 !important;
   }
-
 }
 
 .p-dialog-mask {
-  align-items: flex-start!important;
+  align-items: flex-start !important;
 }
 
 .form-modal {

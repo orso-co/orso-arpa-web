@@ -1,4 +1,7 @@
-import { ProjectParticipationStatusInternal, ProjectParticipationStatusResult } from '../../enums';
+import {
+  ProjectParticipationStatusInternal,
+  ProjectParticipationStatusResult,
+} from '../../enums';
 import { ReducedMusicianProfileDto } from '../mupros/ReducedMusicianProfileDto';
 import { ProjectParticipationStatusInner } from '../../enums/projects/ProjectParticipationStatusInner';
 import { MyAppointmentListDto } from '../appointments/MyAppointmentListDto';

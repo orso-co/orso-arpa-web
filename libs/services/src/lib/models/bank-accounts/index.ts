@@ -1,2 +1,2 @@
-export * from './BankAccountCreateBodyDto'
-export * from './BankAccountModifyBodyDto'
+export * from './BankAccountCreateBodyDto';
+export * from './BankAccountModifyBodyDto';

@@ -1,0 +1,33 @@
+.global-loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  display: block;
+  height: 2rem;
+  margin-right: 0.5rem;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.menu-bar {
+  // height: 8vh;
+  border-radius: 0px !important;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.main-content {
+  padding: 1rem;
+  // height: calc(100vh - 8vh);
+  // overflow-y: auto;
+}

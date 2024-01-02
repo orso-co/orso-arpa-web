@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
-import { FormsModule, ReactiveFormsModule, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  UntypedFormBuilder,
+  UntypedFormGroup,
+  Validators,
+} from '@angular/forms';
+import { first, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { SessionService } from '@arpa/core';
 // import { NotificationsService } from '../../../../@arpa/services/notifications.service';
 // import { AuthService } from '../../../../@arpa/services/auth.service';
 // import { FormErrorService } from '@arpa/services';
@@ -17,30 +24,35 @@ import { of } from 'rxjs';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   loginFormGroup: UntypedFormGroup;
   hide = true;
   notificationsService = {
-    error: (_: string, __: string) => { console.log({_, __ })},
-    info: (_: string, __: string) => { console.log({_, __ })},
-    success: (_: string, __: string) => { console.log({_, __ })},
-  }
+    error: (_: string, __: string) => {
+      console.log({ _, __ });
+    },
+    info: (_: string, __: string) => {
+      console.log({ _, __ });
+    },
+    success: (_: string, __: string) => {
+      console.log({ _, __ });
+    },
+  };
   authService = {
     login: (_: unknown) => of(_),
     forgotPassword: (username: string) => of(username),
     resendConfirmationLink: (username: string) => of(username),
-  }
+  };
   formErrorService = {
-    handleError: (_: unknown, __: string) => { console.log({_, __ })},
-  }
-
+    handleError: (_: unknown, __: string) => {
+      console.log({ _, __ });
+    },
+  };
 
   constructor(
     formBuilder: UntypedFormBuilder,
     private router: Router,
-    //private notificationsService: NotificationsService,
-    //private authService: AuthService,
-    // private formErrorService: FormErrorService
+    private sessionService: SessionService //private notificationsService: NotificationsService, //private authService: AuthService, // private formErrorService: FormErrorService
   ) {
     this.loginFormGroup = formBuilder.group({
       usernameOrEmail: [null, [Validators.required, Validators.minLength(1)]],
@@ -48,13 +60,25 @@ export class LoginComponent {
     });
   }
 
+  ngOnInit(): void {
+    if (this.sessionService.isLoggedIn()) {
+
+      console.log('is logged in');
+      this.sessionService
+        .resumeSession()
+        .pipe(tap(() => this.router.navigate(['/'])))
+        .subscribe();
+    }
+  }
+
   submit(): void {
-    this.authService
+    this.sessionService
       .login({ ...this.loginFormGroup.value })
       .pipe(first())
       .subscribe(
         () => {
-          this.router.navigate(['/arpa']);
+          console.log('success!');
+          this.router.navigate(['/']);
         },
         (error) => {
           if (error.status === 401) {
@@ -95,7 +119,10 @@ export class LoginComponent {
       .pipe(first())
       .subscribe(
         () => {
-          this.notificationsService.success('FORGOT_PASSWORD_SEND_MAIL_SUCCESS', 'views');
+          this.notificationsService.success(
+            'FORGOT_PASSWORD_SEND_MAIL_SUCCESS',
+            'views'
+          );
         },
         (error) => {
           this.formErrorService.handleError(this.loginFormGroup, error);

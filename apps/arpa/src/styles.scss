@@ -1,165 +1,9 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
-//  The following line adds:
-//    1. Default typography styles for all components
-//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
-//  If you specify typography styles for the components you use elsewhere, you should delete this line.
-//  If you don't need the default component typographies but still want the hierarchy styles,
-//  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
-// @include mat.all-legacy-component-typographies();
-
-@include mat.core();
-// @include mat.legacy-core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$arpaprimary: mat.define-palette(mat.$indigo-palette);
-$arpaaccent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$arpawarn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$arpatheme: mat.define-dark-theme(
-  (
-    color: (
-      primary: $arpaprimary,
-      accent: $arpaaccent,
-      warn: $arpawarn,
-    ),
-  )
-);
-
-.arpa-light {
-  // Create the theme object. A theme consists of configurations for individual
-  // theming systems such as "color" or "typography".
-  $arpatheme: mat.define-light-theme(
-    (
-      color: (
-        primary: $arpaprimary,
-        accent: $arpaaccent,
-        warn: $arpawarn,
-      ),
-    )
-  );
-}
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-// @include mat.legacy-core-theme($arpatheme);
-@include mat.core-theme($arpatheme);
-
-@include mat.sidenav-theme($arpatheme);
-@include mat.toolbar-theme($arpatheme);
-// @include mat.legacy-card-theme($arpatheme);
-// @include mat.legacy-button-theme($arpatheme);
-// @include mat.legacy-menu-theme($arpatheme);
-@include mat.card-theme($arpatheme);
-@include mat.button-theme($arpatheme);
-@include mat.menu-theme($arpatheme);
-
-/* You can add global styles to this file, and also import other style files */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  overflow-x: scroll;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
-
-hr {
-  border-top: 1px solid var(--surface-800);
-  border-bottom: 0;
-  opacity: 0.25;
-}
-
-.p-menu .p-submenu-header {
-  text-transform: uppercase;
-  font-weight: bold !important;
-  opacity: 0.8;
-  background: initial !important;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: var(--text-color);
-  }
-
-  &:visited {
-    color: var(--text-color-secondary);
-  }
-}
-
-pre {
-  font-weight: 400;
-
-  .number-line {
-    color: #adadaf;
-  }
-  .string {
-    color: #95c602;
-  }
-  .number {
-    color: #f2b619;
-  }
-  .boolean {
-    color: #0097f1;
-  }
-  .null {
-    color: #727990;
-  }
-  .key {
-    color: #fff;
-  }
-}
-
-.full-width {
-  width: 100% !important;
-}
-
-.spinner-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-}
-
-.h-full {
-  height: 100% !important;
-}
-
-.w-full {
-  width: 100% !important;
-}
-
 /* You can add global styles to this file, and also import other style files */
 // @import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+@import 'primeng/resources/themes/mdc-light-indigo/theme.css';
+@import 'primeng/resources/primeng.css';
 
-
-@import "primeicons/primeicons.css";
+@import 'primeicons/primeicons.css';
 @import 'assets/common/fonts/icomoon/style.css';
 @import 'primeflex/primeflex.css';
 // @import 'flag-icons/css/flag-icons.min.css';
@@ -168,5 +12,12 @@ pre {
 //@import '@fullcalendar/daygrid/main.css';
 //@import '@fullcalendar/timegrid/main.css';
 
+html,
+body {
+  height: 100%;
+}
 
-
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

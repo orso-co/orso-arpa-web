@@ -1,0 +1,9 @@
+:host ::ng-deep {
+  span.p-tag {
+    &.state-default,
+    &.state-cancelled,
+    &.state-archived {
+      background-color: var(--surface-d);
+    }
+  }
+}

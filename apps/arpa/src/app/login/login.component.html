@@ -1,12 +1,18 @@
-<div class="flex flex-column page justify-content-center align-items-center pt-8">
+<div
+  class="flex flex-column page justify-content-center align-items-center pt-8"
+>
   <!-- <arpa-logo></arpa-logo> -->
-  <div class='arpa-spinner'>
-    <img src='assets/common/logos/arpa_logo.png' />
+  <div class="arpa-spinner">
+    <img src="assets/common/logos/arpa_logo.png" />
   </div>
 
   <h1 i18n>Login</h1>
   <div class="content pt-2">
-    <form (ngSubmit)="submit()" [formGroup]="loginFormGroup" class="justify-content-center">
+    <form
+      (ngSubmit)="submit()"
+      [formGroup]="loginFormGroup"
+      class="justify-content-center"
+    >
       <div class="p-fluid">
         <!-- <arpa-form-field label="USERNAME_OR_EMAIL">
           <input autocomplete="username" formControlName="usernameOrEmail" id="usernameOrEmail" pInputText type="text">
@@ -18,22 +24,35 @@
 
         <div class="field">
           <label for="firstname1">Username or E-mail</label>
-          <input id="firstname1" type="text" placeholder="someone@arpa.co" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-      </div>
-      <div class="field">
+          <input
+            id="firstname1"
+            formControlName="usernameOrEmail"
+            type="text"
+            placeholder="someone@arpa.co"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+          />
+        </div>
+        <div class="field">
           <label for="lastname1">Password</label>
-          <input id="lastname1" type="password" placeholder="*****" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-      </div>
-    
+          <input
+            id="lastname1"
+            formControlName="password"
+            type="password"
+            placeholder="*****"
+            class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+          />
+        </div>
+
         <div class="field">
           <p-button
             [disabled]="loginFormGroup.invalid || loginFormGroup.pristine"
             i18n-label
             label="Login"
-            type="submit">
+            type="submit"
+          >
           </p-button>
         </div>
-    
+
         <div class="formgroup-inline">
           <div class="field">
             <p-button
@@ -42,10 +61,11 @@
               i18n-label
               [plain]="true"
               [text]="true"
-              styleClass="no-margin">
+              styleClass="no-margin"
+            >
             </p-button>
           </div>
-    
+
           <div class="field text-right">
             <p-button
               (click)="goToRegister()"
@@ -53,16 +73,13 @@
               label="Register"
               [plain]="true"
               [text]="true"
-              >
+            >
             </p-button>
           </div>
         </div>
       </div>
     </form>
-    
   </div>
   <footer></footer>
 </div>
 <!-- <arpa-loading></arpa-loading> -->
-
-

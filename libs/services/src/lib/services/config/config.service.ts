@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ConfigService {
-
   private readonly config: any;
   private readonly env: any;
   private ready = false;

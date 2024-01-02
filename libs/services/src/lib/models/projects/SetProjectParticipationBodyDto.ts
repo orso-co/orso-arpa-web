@@ -1,4 +1,8 @@
-import { ProjectInvitationStatus, ProjectParticipationStatusInner, ProjectParticipationStatusInternal } from '@arpa/core';
+import {
+  ProjectInvitationStatus,
+  ProjectParticipationStatusInner,
+  ProjectParticipationStatusInternal,
+} from '@arpa/core';
 
 export interface SetProjectParticipationBodyDto {
   participationStatusInner?: ProjectParticipationStatusInner;

@@ -1,5 +1,5 @@
 export enum RegionPreferenceType {
-  NONE = "NONE",
-  REHEARSAL = "REHEARSAL",
-  PERFORMANCE = "PERFORMANCE"
-};
+  NONE = 'NONE',
+  REHEARSAL = 'REHEARSAL',
+  PERFORMANCE = 'PERFORMANCE',
+}

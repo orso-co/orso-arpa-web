@@ -18,3 +18,4 @@ export * from './tokens';
 export * from './urls';
 export * from './users';
 export * from './venues';
+export * from './feed';

@@ -4,14 +4,13 @@ import { Observable, of } from 'rxjs';
 
 @Injectable()
 export class UsersService {
-
   constructor(private apiService: ApiService) {
-    console.log('users service constructor')
+    console.log('users service constructor');
   }
 
   get(): Observable<unknown> {
-    console.log('UserServices.get')
+    console.log('UserServices.get');
     console.log('api service >>', this.apiService);
-    return of({})
+    return of({});
   }
 }

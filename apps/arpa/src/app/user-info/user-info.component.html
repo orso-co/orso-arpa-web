@@ -1,0 +1,14 @@
+<div class="user-info" #userInfo (click)="userProfileMenu.toggle($event)">
+  <arpa-avatar></arpa-avatar>
+
+  {{ user?.userName }} {{ user?.person?.givenName }} {{ user?.person?.surname }}
+
+</div>
+
+<p-menu
+  #userProfileMenu
+  [appendTo]="userInfo"
+  [model]="items"
+  [popup]="true"
+  class="arpa-menu"
+></p-menu>

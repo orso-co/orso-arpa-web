@@ -38,6 +38,6 @@ export class CoreAppConfig {
     default: string;
     locales: {
       [key: string]: string;
-    }
-  }
+    };
+  };
 }

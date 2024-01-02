@@ -3,7 +3,10 @@ import { ProjectInvitationStatus } from '../../enums/projects/ProjectInvitationS
 import { ReducedMusicianProfileDto } from '../mupros/ReducedMusicianProfileDto';
 import { ReducedPersonDto } from '../persons/ReducedPersonDto';
 import { ReducedProjectDto } from './ReducedProjectDto';
-import { ProjectParticipationStatusInternal, ProjectParticipationStatusResult } from '../../enums';
+import {
+  ProjectParticipationStatusInternal,
+  ProjectParticipationStatusResult,
+} from '../../enums';
 
 export interface ProjectParticipationDto {
   id?: string;
